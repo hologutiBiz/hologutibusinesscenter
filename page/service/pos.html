@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Terminal | Hologuti Business Centre</title>
+
+    <link rel="icon" type="image/png" href="/Assets/image/hbc-logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Serif:wght@100;200&family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', serif; 
+        }
+
+       /* header */
+       nav {
+        padding: 15px;
+        background-color: #f5f5f5;
+       }
+       .nav-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around; 
+       }
+       nav a {
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 192, 203, 0);
+       }
+       nav a:hover {
+        color: blue;
+        background-color: snow;
+        border: 1px solid pink;
+       }
+
+ 
+
+       /* main */
+       .financial-inclusion p {
+            margin: 5rem;
+            font-size: 38px;
+       }
+
+                /*(pos features) */
+       .agent-banking {
+            color: snow;
+            background-image: url('/Assets/image/POS/pos.png'); 
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-size: cover; 
+            padding: 0 5rem 20rem 5rem;  
+       }
+       .agent-banking h3 {
+            text-align: center;
+            font-size: 40px;
+       }
+       .agent-banking p {
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.489);
+            border-radius: 5px;
+            font-weight:100;
+            font-size: 36px;
+       }
+
+       .pos-features {
+            margin-left: 30%;
+            padding: 20px;
+            font-size: 34px;
+       }
+       .transactions-list {
+            color: blue;
+            font-size: 20px;
+       }
+
+
+                /* (getting pos) */
+        .getting-pos {
+            padding: 50px;
+            margin: 5rem 3.5rem 5rem 3.5rem;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .getting-pos h3 {
+            text-align: center;
+            font-size: 40px;
+        }
+       .wrapper {
+            display: flex;
+            gap: 20px;
+       }
+       button {
+            width: 100%;
+            padding: 5px;
+            font-size: 20px;
+       }
+       
+
+       /* footer */
+       footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f5f5f5;
+       }
+       .fa-brands {
+            padding: 10px;
+       }
+     
+     
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/page/service/webDesign.html">Web Development</a></li>
+                <li><a href="/page/service/banking.html">Banking Service</a></li>
+                <li><a href="/page/service/payment.html">Payment Services</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="financial-inclusion">
+            <p >Be a Financial Inclusion beneficiary. Over a million people have benefitted through agent banking, and still benefitting up to this moment</p>
+        </div>
+        <section class="agent-banking">
+            <h3>Agent Banking?</h3>
+            <p>Yeah, agent banking is the extension of Banks retail to private individuals like you.<br>
+                <br> 
+                It allows you to perform banking services to the public through the use of <strong>POS</strong> terminal and earn financial reward for every transaction you perform
+            </p>
+        </section>
+        <section class="pos-features">
+            <p> You get to carry out transactions like</p>  
+            <ul class="transactions-list">
+                <li>Deposit/Send Money to an account</li>
+                <li>Receive Payment</li>
+                <li>Cash Withdrawal</li>
+                <li>Bills Payment</li>
+                <li>Fund Bet Account</li>
+            </ul>  
+            <p>...on a secure and fast terminal</p>    
+        </section>
+        <section class="getting-pos">
+            <h3>Are you still waiting?</h3>
+            <div  class="wrapper">
+                <div class="left">
+                    <p style="font-size: 34px;">Make <a href="" id="posPayment" style="text-decoration: double;">payment</a> now, you get your POS terminal in less than 24 and start making cool money</p>
+                    <button type="button" id="getPOS">Get POS</button>
+                </div>
+                <div>
+                    <img src="/Assets/image/POS/pos-get2.jpg">
+                </div>
+            </div>
+    </main>
+    <footer>
+        <small>Connect with us</small>
+            <a href="https://twitter.com/hologuti_BC" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/hologutiBusines" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+     </footer>
+</body>
+</html>

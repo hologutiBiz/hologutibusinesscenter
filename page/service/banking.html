@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/Assets/image/hbc-logo.jpg">
+    <title>Banking | Hologuti Business Centre</title>
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            color: #0909f5b1;
+            padding: 0;
+            margin: 0;
+            font-family: 'Gruppo', sans-serif;
+        }
+
+        /* header */
+        header {
+            background-color: #000;
+            background-color: #0000ff;
+            background: linear-gradient(#0000ff, lightblue);
+            padding: 10px;
+        }
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        header a {
+            text-decoration: none;
+            color: pink;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid #ffffff00;
+        }
+        header a:hover {
+            color: #fff;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            background-color: rgba(173, 216, 230, 0.253);
+        }
+
+
+                            /* main */
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: center;
+            margin: 5rem 30px 5rem 20px;
+        }
+        div.article {
+            position: relative;
+            width: 70%;
+            height: 500px;
+            background-color: #000; 
+            border-radius: 10px;
+            padding: 10px; 
+            margin: 10px 0 5em 0;  
+            gap: 10px; 
+            box-shadow: -1px 1px 3px 2px #2a2a2af2;
+        }
+        /* .balance {
+            color: #fff;
+            position: absolute;
+            top: 75px;
+            left: 220px;
+        }
+        span.naira-sign {
+            text-decoration: line-through;
+            text-decoration-style: double ;
+        } */
+        /* article p {
+            color: #fff;
+            text-align: center ;
+            font-size: 36px;
+        } */
+        div.features-wrapper {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;  
+            align-items: center; 
+        }
+        .feature {
+            color: #fff; 
+            display: block;
+            width: 200px;
+            height: 150px;
+            margin: 10px; 
+            padding: 5px;  
+            background-color: #000; 
+            border: 1px solid #ffffff3a;
+            border-radius: 5px;
+            box-shadow: -2px 1px 5px 3px #ffffff3a; 
+        }
+   
+        button {
+            background-color: #ffffff87;
+            padding: 3.5px;
+            width: 80px;
+            border: none;
+            position: relative;
+            bottom: 1.9px;
+        }
+        button.send-money {
+            width: 100px;
+            margin: 2px;
+            border-radius: 20px;
+            font-size:x-small;
+        }
+
+
+        p.our-aim {
+            color: #000;
+            text-align: center;
+            margin: 20px;
+            font-size: 34px;
+        }
+
+        .sec {
+            width: 100%; 
+            height: 40rem;
+            margin: 20px 0 10rem 0;
+            box-shadow:  0 1px 2px 2px #2a2a2af2;
+
+        }
+        .open-account h2 {
+            color: lightblue;
+            text-align: center;
+            padding-top: 10px;
+            height: 50px;
+            border-bottom: 1px solid #0000ff4e;
+            background-color: #000;
+            font-size: 48px;
+        }
+        .divider {
+            display: flex; 
+            gap: 20px;
+        }
+        .left-for-account {
+            width: 650px;
+            height: 450px ;
+            margin: 20px;
+        }
+        .left-for-account p {
+            color: red;
+            font-size: 36px;
+        }
+        .right-for-account {
+            position: relative;
+            width: 650px;
+            height: 450px ;
+            background-image: url('/Assets/image/banking/open-account.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid lightblue;
+            border-radius: 10px;
+        }
+        .open-account-btn {
+            position: absolute;
+            color: #fff;
+            width: 300px;
+            padding: 10px;
+            background-color: #ff0000;
+            border-radius: 10px;
+            bottom: 15px;
+            left: 6em;
+            font-size: 30px;
+        }
+        .open-account-btn:hover {
+            background-color: #ff0000b1;
+        }
+
+        /* card Issuance */
+        .atm-card {
+            filter: grayscale(100%);
+            background-color: #646446;
+        }
+        .atm-card h2 {
+            color: lightblue;
+            text-align: center;
+            padding-top: 10px;
+            height: 50px;
+            border-bottom: 1px solid #0000ff4e;
+            background-color: #000;
+            font-size: 48px;
+        }
+        .atm-card p {
+            text-align: center; 
+            font-size: 10rem;
+        }
+
+        /* Fund transfer */
+        /* .fund-transfer {
+
+        } */
+      
+        .fund-transfer h2 {
+            color: lightblue;
+            text-align: center;
+            padding-top: 10px;
+            height: 50px;
+            border-bottom: 1px solid #0000ff4e;
+            background-color: #000;
+            font-size: 48px;
+        }
+        /* #faMoneyBillTransfer {
+            color: lightblue;
+            font-size: 36px;
+        } */
+        .fund-transfer p {
+            color: #0000ff;
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .right-images-slide {
+            position: relative;
+            width: 650px;
+            height: 450px ;
+        }
+        .fading-image {
+            display: none;
+            position: absolute;
+            animation: fadeInOut ease 5s infinite alternate;
+            border: 1px solid lightblue;
+            border-radius: 10px;
+        }
+        @keyframes fadeInOut {
+            0% {
+                    opacity: 0;
+            }
+
+            100% {
+                    opacity: 1;
+            }
+        }
+
+
+
+        /* Receive money */
+        .receive-money .left {
+            width: 650px;
+            height: 450px ;
+            margin: 20px;
+        }
+        .receive-money h2 {
+            color: lightblue;
+            text-align: center;
+            padding-top: 10px;
+            height: 50px;
+            border-bottom: 1px solid #0000ff4e;
+            background-color: #000;
+            font-size: 48px;
+        }
+        .receive-money p {
+            color: #000;
+            margin: auto;
+            line-height: 1.5em;
+            font-size: 30px;
+        }
+        
+        .receive-money .right {
+            position: relative;
+        } 
+        button.cash-btn {
+            color: #fff;
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            width: 500px;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: green;
+            font-size: 20px;
+        }
+        button.cash-btn:hover {
+            color: #fff;
+            background-color: rgb(7, 179, 7);
+            font-size: 21px;
+        }
+        button.slip-btn {
+            color: #049404;
+            width: 300px;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(173, 216, 230, 0.281);
+            margin: 2em 0 0 5em;
+            font-size: 20px;
+        }
+
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid lightblue;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/page/service/webDesign.html">Web Design</a></li>
+                <li><a href="/page/service/pos.html">POS Terminal</a></li>
+                <li><a href="/page/service/payment.html">Payment Service</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Banking, the bridge between your dreams and your goals</h1>
+            <div class="article">
+                <!-- <p><span class="naira-sign">N</span> 9999.99</p>
+                <span class="balance">Balance</span> -->
+                <div class="features-wrapper">  
+                    <div class="feature">
+                        <h3>Open Account</h3>
+                        <small>Enter Name:</small>
+                        <button></button>
+                        <br>
+                        <small>Phone Number:</small>
+                        <button></button>
+                    </div>
+                    <div class="feature">
+                        <h3>Send Money</h3>
+                        <button class="send-money">Amount</button>
+                        <br>
+                        <button class="send-money">Select Bank  <i class="fa-solid fa-angle-down"></i></button>
+                        <br>
+                        <button class="send-money">pin</button>
+                        <br>
+                        <button class="send-money">send</button>
+                    </div>
+                    <div class="feature">
+                        <h3>Receive Money</h3>
+                        <small>Western Union</small>
+                        <br>
+                        <small>Okay Naira</small>
+                    </div>
+                    <div class="feature">
+                        <h3>Card Issuance</h3>
+                        <small>Debit card</small>
+                        <br>
+                        <small>Credit card</small>
+                        <br>
+                        <i class="fa-brands fa-cc-visa" style="font-size: 24px;"></i>
+                        <i class="fa-brands fa-cc-mastercard" style="font-size: 24px;"></i>
+                        <small>Verve</small>
+                    </div>
+                </div>
+        </section>
+        <p class="our-aim">Our aim is helping you achieve your financial goals,
+                            being the reason why we set-up various outlets for you to just walk in and:</p>
+        <section class="sec open-account">
+            <h2>Open Account
+                <i class="fa-solid fa-user"></i>
+            </h2>
+                <div class="divider">
+                    <div class="left-for-account">
+                        <p>Open a personal savings account to start storing your wealth</p>
+                        <p>You can also open a wallet account to keep your  personal account intact while shopping </p>
+                    </div>
+                    <div class="right-for-account">
+                        <button type="button" class="open-account-btn">Open Account</button>
+                    </div>
+                </div>
+        </section>
+        <section class="sec atm-card">
+            <h2>Card Issuance</h2>
+            <p>Coming Soon</p>
+        </section>
+        <section class="sec fund-transfer">
+            <h2>Fund Transfer
+                <i class="fa-solid fa-money-bill-transfer" id="faMoneyBillTransfer"></i>
+            </h2>
+                <div class="divider">
+                    <div class="left-for-account">
+                        <p>Make a Deposit into your account</p>
+                        <p>Send money to your loved ones</p>
+                        <p>Our outlets is just a stone away from where you are. </p>
+                    </div>
+                    <div class="right-images-slide">
+                        <img class="fading-image" src="/Assets/image/banking/bank-room.jpg" alt="bank vault">
+                        <img class="fading-image" src="/Assets/image/banking/transfer-money.jpg" alt="wire transfer">
+                    </div>
+                </div>
+        </section>
+        <section class="sec receive-money">
+            <h2>Receive Money
+                <i class="fa-solid fa-money-bills"></i>
+            </h2>
+                <div class="divider">
+                    <div class="left">
+                        <p>We understand the vital role of cash-in-hand in your daily activities. That's why our stances are situated in major areas so can stroll in and get cash</p>
+                        <button type="button" class="slip-btn">Transact with slip <i class="fa-solid fa-sheet-plastic"></i></button>
+                    </div>
+                    <div class="right">
+                        <img  src="/Assets/image/banking/coin.jpg" alt="coin">
+                        <button type="button" class="cash-btn">Xfer to get Cash <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        Connect With Us
+        <a href="https://twitter.com/hologuti_BC" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/hologutiBusines" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </footer>
+    <script src="/scripts/bank.js"></script>
+</body>
+</html>

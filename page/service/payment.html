@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Hologuti Business Centre</title>
+    <link rel="icon" type="image/png" href="/Assets/image/hbc-logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #f5f5ff;
+            font-family: 'Cormorant Garamond', serif; 
+        }
+        header {
+            background-image: url('/Assets/image/bill.png');
+            background-repeat: no-repeat;
+            background-position:top;
+            background-size: cover;
+            padding: 100px;
+          
+        }  
+        ul {
+            list-style: none;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; 
+            top: 100px; 
+        } 
+        li {
+            padding: 10px;
+            background-color: #0000009a;
+            border-radius: 10px;  
+           
+        }
+        li a {
+            filter: grayscale(100%);
+            transition-duration: 350ms;
+            transition-timing-function: ease; 
+            font-size: large;
+        }
+        a:hover {
+            color: chocolate;
+            filter: grayscale(0);
+
+        }
+        
+
+        /* <h> and <p> tag */
+        h2 {
+            color: chocolate;
+            text-align: center;
+            font-size: 36px;
+        }
+        h3 {
+            color: #add8e6;
+            font-size: 34px;
+        }
+        p { 
+            color: #add8e6;
+            text-align: center;
+            font-size: 32px;
+        } 
+
+            /* main */
+        
+        section.intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+
+        }
+        .intro p {
+            color: chocolate;
+            font-size: 4.5rem;
+        }
+        span.HBC {
+           color:  #add8e6;
+        }
+       
+
+        /* (article) */
+        div.items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+            gap: 5px;
+            border: none;
+        }
+        .item {
+            width: 300px;
+            padding: 15px 0 15px 0;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        .item:hover {
+            box-shadow: -2px 2px 3px 2px grey;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /*(education section)*/
+        section.education {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 5rem 0 5rem 0;
+            background-image: url('/Assets/image/education/education.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+           
+        }
+        .education .slide-container p {
+            color: #add8e6;
+           font-size: initial;
+        }
+        div.at-the-finger-tip {
+            width: 40%;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.717);
+            border-radius: 5px;
+        }
+      
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            padding: 10px;
+           
+        }
+
+        div.slide-container {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.717);
+            border-radius: 5px;
+        }
+        div.slider {
+            display: none;
+            border: 1px solid #add8e63e;
+          
+        }
+        img.photo {
+            width: 250px;
+            height: 400px;
+            border-radius: 2px;
+            padding: 10px;
+        }
+  
+        button.purchase-btn {
+            width: 250px;
+            padding: 10px;
+            margin: 20px;
+            font-size: 20px;
+        }
+        button.purchase-btn:hover {
+            color: #800080;
+            background-color: #add8e6;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        /*(tv section)*/
+        section.tv {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+            margin: 8rem;
+            gap: 20px;
+            
+        }
+      
+        .tv h2, p {
+            color: unset;
+            font-weight: bolder;
+        }
+      
+        button.subscribe {
+            color: #fff;
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none; 
+            background-color: #000;
+        } 
+        button.subscribe:hover {
+            cursor: pointer;
+            animation: pulse 5s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                background-color: #001F3F;
+        }
+            30% {
+                background-color: green;
+            }
+            65% {
+                background-color: mediumblue;
+            }
+            100% {
+                background-color: chocolate;
+        }
+        }
+
+
+        /* electricity section */
+        section.electric {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            background-color: #000; 
+            height: 30rem;
+            padding: 20px;
+        }
+        .electric p {
+            color: #add8e6;
+        }
+        
+        .fa-lightbulb {
+            position: absolute;
+            color:rgba(255, 255, 0, 0.8);
+            transform: rotate(240deg); 
+            font-size: 70px;
+            box-shadow: 0px -600px 100px 30px rgba(255, 255, 0, 0.8); 
+            transition: opacity 0.5s ease; 
+            top: 5%;
+            right: 10%;   
+        }
+        .fa-lightbulb.off {
+            opacity: 0; 
+
+        }
+        section.electric {
+            font-size: 36px;
+        }
+        
+
+        section .recharge-btn {
+            position: relative;
+            width: 200px;
+            left: 35%;
+            padding: 10px;
+            background-color: #0d023477;
+            border: none;
+            border-radius: 10px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .recharge-btn:hover {
+            color: #000;
+            background-color: rgba(255, 255, 3, 0.482);
+            cursor: pointer;
+        }
+     
+        img.e-logo {
+            width: 60px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+            /*internet section */
+        section.internet {
+            position: relative;
+            padding: 1px;
+            border-top: 1px solid #f5f5ff67;
+           
+        }
+        div.back-image {
+            background-image: url('/Assets/image/internet/internet.jpeg');
+            background-repeat: no-repeat;
+            background-position:left;
+            background-size: cover;  
+            height: 500px;
+        }
+        div.i-wrapper {
+            position: absolute;
+            width: 50%;
+            height: 75%;
+            border-radius: 10px;
+            background-color: #0000009e;
+            left: 25%; 
+            top: 35px;
+            backdrop-filter: blur(5px); 
+        }
+        section.internet h2 {
+            color: #fff;
+            font-size: 46px;
+        }
+        section.internet p {
+            color: #fff;
+        }
+        section.internet img {
+            all: unset;
+            width: 150px;
+            height: 100px;
+            border-radius: 15px;
+            border: 1px solid #f5f5ff27;
+            border-radius: 10px;
+            padding: 5px;  
+            margin-left: 100px;          
+        }
+        div.button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button.pay-now {
+            color: #ffffff62; 
+            width: 70%;
+            padding: 10px;
+            background-color: initial; 
+            font-size: 20px;
+        }
+        button.pay-now:hover {
+            cursor: pointer;
+            color: #0000ff;
+            background-color: #f5f5ff91; 
+            border-radius: 15px;
+            border: none;
+        }
+
+            /* SMS section */
+        section.sms {
+            height: 30rem;
+            padding: 15px;
+            margin: 5rem;
+            border-bottom: 1px solid #ff69b4;
+            
+        }
+        
+        section.sms div.icon-wrapper {
+            color: #ff69b4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            font-size: 200px;
+            gap: 50px;
+           
+        }
+        button.cliqPayment-btn {
+            color: #ff69b4;
+            width: 400px;
+            padding: 5px;
+            border: 1px solid #ff69b4;
+            border-radius: 10px;
+            font-size: 24px;
+            
+        }
+      
+
+        /* lr Card section */
+        section.lrcard {
+            position: relative;
+            background: conic-gradient( green, red, yellow);
+            height: 700px;
+            margin-top: auto;
+            margin-left: auto;
+            filter: brightness(60%);
+
+        }
+        .lrcard h2 {
+            color: #fff;
+            font-weight: bolder;
+            font-size: 9rem;
+           
+        }
+        #faBeatEnvelop {
+            position: absolute;
+            bottom: 200px;
+            left: 46%; 
+            color: #fff;
+            background-color: #000;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 100px;
+        }
+        button.buy {
+           width: 300px;
+           padding: 10px;
+           margin: 4em 0 0 40%;
+           background-color: #0000000b; 
+           border: 1px solid #000;
+           border-radius: 10px;
+           font-size: 20px;
+        }
+        .buy:hover {
+            color: #fff;         
+            background-color: green;
+            border: 1px solid yellow;
+        }
+
+
+        /* transaction slip */
+        .transaction-slip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #000;
+            margin: 5rem 0 5rem 0;
+        }
+        .slip-left,
+        .presentation-right {
+            width: 40%;
+            height: auto;
+        }
+        .slip-btn {
+            color: #fff;
+            width: 300px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            margin: 10px 0 2em 4em;
+            font-size: 20px;
+        }
+        .slip-btn:hover {
+            color: chocolate;
+            background-color: #000000cf;
+            font-weight: bold;
+        }
+
+        /* Many more */
+        .many-more h2 {
+            font-size: 15rem;
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 20px 0 20px 0;
+            background-color: #fff;
+            border-top: 1px solid #add8e636;
+        }
+        /* @keyframes fade-in-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/home.html"><i class="fa-solid fa-house" id="icon"></i></a></li>
+                <li><a href="./webDesign.html"><i class="fa-solid fa-globe"></i></a></li>
+                <li><a href="/page/service/pos.html"><i class="fa-solid fa-cash-register"></i></a></li>
+                <li><a href="/page/service/banking.html"><i class="fa-solid fa-building-columns"></i></a></li>
+            <ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <p>That <strong>Peace of Mind</strong> knowing your <b>Bills</b> can be paid easily at <span class="HBC"> Hologuti Business Centre</span></p>
+            <span class="ejimo" style="font-size: 10rem;">&#129303</span>
+        </section>
+        <article >
+            <div class="items">
+                <div class="item">
+                    <a href="#education"> Education
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#tv"> Cable TV
+                        <i class="fa-solid fa-tv"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#electric"> Electricity
+                        <i class="fa-solid fa-bolt"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#data"> Internet
+                        <i class="fa-solid fa-signal"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#sms"> Cliqsms
+                        <i class="fa-solid fa-comment-sms"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#lrCard">LR Card
+                        <i class="fa-solid fa-inbox"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#transactionSlip">Transact Slip
+                        <i class="fa-solid fa-sheet-plastic"></i>
+                    </a>
+                </div>
+                <div class="item"><a href="">Ask for product</a></div>
+            </div>
+        </article>
+        <section  class="education" id="education">
+            <div class="at-the-finger-tip">
+                <h3>At the tip of your finger, you can easily get your Registration PIN, Scratch Card, Token</h3>
+                <img src="/Assets/image/education/Waec_logo.png" alt="waec logo" >
+                <img src="/Assets/image/education/JAMB_logo.png" alt="jamb logo" >
+                <img src="/Assets/image/education/neco-logo.png" alt="neco logo" >
+            </div>
+            <div class="slide-container">
+                <div class="slider">
+                    <img src="/Assets/image/education/waec-form.png" alt="waec form" class="photo">
+                    <p>WAEC/GCE Registration PIN</p>
+                </div>
+                <div class="slider">
+                    <img src="/Assets/image/education/waec-result.jpg" alt="waec result page" class="photo">
+                    <p>WAEC/GCE Scratch Card</p>
+                </div>
+                <div class="slider">
+                    <img src="/Assets/image/education/neco-result.jpg" alt="neco result page" class="photo">
+                    <p>NECO Token</p>
+                </div>
+                <div class="slider">
+                    <img src="/Assets/image/education/jamb-pin.png" alt="jamb Registration PIN" class="photo">
+                    <p>JAMB e-pin</p>
+                </div>
+                <button type="button" class="purchase-btn">Purchase</button>
+            </div>
+        </section>
+        <section class="tv" id="tv">
+                <div>
+                    <h2>Enjoy the world of Entertainment</h2>
+                    <p>Renew your Decoder subscription and get your account activated in lightning speed</p>
+                </div>
+                <div>
+                    <img src="/Assets/image/cableTV/GOtv.png">
+                    <img src="/Assets/image/cableTV/DStv-logo.jpg">
+                    <img src="/Assets/image/cableTV/startTimes.jpeg">    
+                </div>
+            </div>
+            <button type="button" class="subscribe">Subscribe</button>
+        </section>
+        <section class="electric" id="electric">
+            <i class="fa-solid fa-lightbulb" id="light"></i>
+            <div class="e-wrapper"> 
+                <h2>Distance? No! it's never a barrier</h2>
+                <p>Here, you can pay for your Prepaid and Postpaid meter anywhere in the country</p>
+                <p>Just click the recharge button</p>
+                <div class="e-logo-group">
+                    <img src="/Assets/image/Electricity/ibedc.png" class="e-logo">
+                    <img src="/Assets/image/Electricity/ikeja.jpg" class="e-logo">
+                    <img src="/Assets/image/Electricity/Eko.jpg" class="e-logo">
+                    <img src="/Assets/image/Electricity/abuja.jpg" class="e-logo">
+                    <img src="/Assets/image/Electricity/benin.png" class="e-logo">
+                    <img src="/Assets/image/Electricity/enugu.png" class="e-logo">
+                    <img src="/Assets/image/Electricity/jos.jpg" class="e-logo">
+                    <img src="/Assets/image/Electricity/kano.png" class="e-logo">
+                </div> 
+                <button type="button" class="recharge-btn">Recharge</button>
+            </div>
+        </section>
+        <section class="internet" id="data">
+            <div class="back-image"></div>
+            <div class="i-wrapper">
+                <h2>Connect to the world</h2>
+                <p>Refill and Renew your internet subscription</p>
+                <img src="/Assets/image/internet/swift.jpeg">
+                <img src="/Assets/image/internet/Spectranet.jpg">
+                <div class="button-wrapper">
+                    <button type="button" class="pay-now">Pay now</button>
+                </div>
+            </div>
+        </section>
+        <section class="sms" id="sms">
+            <div class="icon-wrapper">
+                <p>One Text, multiple destination delivery</p>
+                <i class="fa-solid fa-envelopes-bulk"></i>
+                <button type="button" class="cliqPayment-btn">Cliq payment</button>
+            </div>
+        </section>
+        <section class="lrcard" id="lrCard">
+            <div class="premier-inbox">
+                <h2>Premier results to your inbox</h2>
+                <i class="fa-solid fa-envelope fa-beat-fade" id="faBeatEnvelop"></i>
+                <button type="button" class="buy">Buy</button>
+            </div>
+        </section>
+        <section class="transaction-slip" Id="transactionSlip">
+            <!-- <div class="devider"> -->
+                <div class="slip-left">
+                    <h2>Proxy Transaction</h2>
+                    <p>initiate your transaction at your end, send third party to finalize it</p>
+                    <button type="button" class="slip-btn">Transact with slip <i class="fa-solid fa-sheet-plastic"></i></button>
+                </div>
+                <div class="presentation-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quod commodi incidunt fugiat quis molestiae itaque. Nostrum animi non veniam minus eius ad modi libero! Est enim corporis quo quia?</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="many-more">
+                <h2>And Many More</h2>
+            </div>  
+        </section>
+    </main>
+    <footer>
+        Connect With Us
+        <a href="https://twitter.com/hologuti_BC" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/hologutiBusines" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </footer>
+    <script src="/scripts/payment.js"></script>
+    
+</body>
+</html>

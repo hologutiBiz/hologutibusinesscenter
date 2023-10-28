@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Page | Hologuti Business Centre</title>
+
+    <link rel="icon" type="image/png" href="../../Assets/image/hbc-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./webDesign.css">
+
+  
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/home.html" class="nav-icons">
+                        <i class="fa-solid fa-house" id="icon"></i>
+                        <span class="nav-span">Home</span>
+                   </a>
+                </li>
+                <li>
+                    <a href="../contact.html" class="nav-icons">
+                        <i class="fa-solid fa-address-card" id="icon"></i>
+                        <span class="nav-span">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section class="content-text-wrapper">
+            <p class="content-text">We design website that suits your online presence, <span>STATIC</span>, <span>BUSINESS</span>, <span>E-COMMERCE</span>.
+                From creating a new website from scratch to, customizing an existing ones. 
+            </p>
+            <button type="button" class="get-started btn1">GET STARTED</button>
+        </section>
+        <section class="code-snippet">
+            <div>
+            <pre>
+                <code>
+                    &lt;!DOCTYPE html&gt; 
+                    <span class="const-color-blue"> &lt;head&gt;</span>
+                        <span class="const-color-blue">&lt;meta</span> <span class="charset-color-light">charset</span>="UTF-8"&gt;
+                        <span class="const-color-blue">&lt;title&gt;</span>Let Create Your Website<span class="const-color-blue">&lt;/title&gt;</span>
+                    <span class="const-color-blue">&lt;/head&gt;</span>
+                    <span class="const-color-blue"> &lt;body&gt;</span>
+                        <span class="const-color-blue"> &lt;header&gt;</span>
+                            <span class="const-color-blue"> &lt;nav&gt;</span>
+                                <span class="const-color-blue"> &lt;ul&gt;</span>
+                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Home</span> &lt;/li&gt;</span>
+                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">About</span> &lt;/li&gt;</span>
+                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Contact</span>&lt;/li&gt;</span>
+                                <span class="const-color-blue"> &lt;/ul&gt;</span>
+                            <span class="const-color-blue"> &lt;/nav&gt;</span>
+                        <span class="const-color-blue"> &lt;/header&gt;</span>
+                    <span class="const-color-blue"> &lt;/body&gt;</span>
+                        <span class="const-color-blue">&lt;script&gt;</span>    
+                            <span class="const-color-blue">const</span> newTaskInput = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
+                            <span class="const-color-blue">const</span>  addTaskButton = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('addTask')</span>;
+                            <span class="const-color-blue">const</span>  taskList = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('taskList')</span>;
+                            
+                            <span class="id-color-green">// add event listner //</span>
+                            addTaskButton.<span class="get-color-red">addEventListener</span>('click', () => 
+                                <span class="const-color-blue">const</span> taskText = newTaskInput.value.trim()
+                                <span class="const-color-blue">if</span> (taskText !== '') {
+                                    <span class="const-color-blue">const</span> li = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
+                                    li.innerHTML = `
+                                             
+                                        `;
+                                    taskList.<span class="get-color-red">appendChild</span>(li) 
+                                });
+                        <span class="const-color-blue">&lt;/script&gt;</span>    
+                    <span class="const-color-blue"> &lt;/body&gt;</span>
+                </code>
+            </pre>
+            </div>
+            <div class="hire-us">
+                <p>Our team is available for projects colaboration</p>
+                <img src="/Assets/image/internet/web-monitor.jpg">
+                <button type="button" class="hire-btn">Hire Us</button>
+            </div>
+        </section>
+        <section class="web-sample">
+            <p class="content-text">Let's bring your Portfolio, Landing Page and Shopping outlets to 
+                <strong>L
+                    <span>I</span>
+                            V
+                    <span>E</span>
+                </strong>
+
+                .This is what we do best
+            </p>
+            <article class="video-wrapper">
+                <div>
+                    <figcaption>Static Website</figcaption>
+                    <video src="../../Assets/video/static-website-google-chrome-2023-09-08-01-20-48_HFBE9yqO.mp4" width="600" height="300" autoplay loop controls></video>
+                </div>
+                <div>
+                    <figcaption>Business Website</figcaption>
+                    <video src="../../Assets/video/Business-Website-Google-Chrome-2.mp4" width="600" height="300" autoplay loop controls></video>
+                </div>
+                <div>
+                    <figcaption>e-commerce Website</figcaption>
+                    <video src="../../Assets/video/e-commerce-Website-Google-Chrome.mp4" width="600" height="300" autoplay loop controls></video>
+                </div>
+                <div>
+                    <img src="/Assets/image/internet/web-int.jpg">
+                </div>
+                <button type="button" class="get-started btn2">GET STARTED</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <address>
+            Connect With Us
+            <a href="https://twitter.com/hologuti_BC" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/hologutiBC" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </address>
+    </footer>
+</body>
+</html>
