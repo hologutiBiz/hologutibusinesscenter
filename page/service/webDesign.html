@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/home.html" class="nav-icons">
+                    <a href="/" class="nav-icons">
                         <i class="fa-solid fa-house" id="icon"></i>
                         <span class="nav-span">Home</span>
                    </a>
@@ -38,48 +38,48 @@
             </p>
             <button type="button" class="get-started btn1">GET STARTED</button>
         </section>
-        <section class="code-snippet">
-            <div>
+        <section class="coding">
+            <div class="code-snippet">
             <pre>
-                <code>
-                    &lt;!DOCTYPE html&gt; 
-                    <span class="const-color-blue"> &lt;head&gt;</span>
-                        <span class="const-color-blue">&lt;meta</span> <span class="charset-color-light">charset</span>="UTF-8"&gt;
-                        <span class="const-color-blue">&lt;title&gt;</span>Let Create Your Website<span class="const-color-blue">&lt;/title&gt;</span>
-                    <span class="const-color-blue">&lt;/head&gt;</span>
-                    <span class="const-color-blue"> &lt;body&gt;</span>
-                        <span class="const-color-blue"> &lt;header&gt;</span>
-                            <span class="const-color-blue"> &lt;nav&gt;</span>
-                                <span class="const-color-blue"> &lt;ul&gt;</span>
-                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Home</span> &lt;/li&gt;</span>
-                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">About</span> &lt;/li&gt;</span>
-                                    <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Contact</span>&lt;/li&gt;</span>
-                                <span class="const-color-blue"> &lt;/ul&gt;</span>
-                            <span class="const-color-blue"> &lt;/nav&gt;</span>
-                        <span class="const-color-blue"> &lt;/header&gt;</span>
-                    <span class="const-color-blue"> &lt;/body&gt;</span>
-                        <span class="const-color-blue">&lt;script&gt;</span>    
-                            <span class="const-color-blue">const</span> newTaskInput = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
-                            <span class="const-color-blue">const</span>  addTaskButton = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('addTask')</span>;
-                            <span class="const-color-blue">const</span>  taskList = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('taskList')</span>;
+              <code>
+                  &lt;!DOCTYPE html&gt; 
+                  <span class="const-color-blue"> &lt;head&gt;</span>
+                      <span class="const-color-blue">&lt;meta</span> <span class="charset-color-light">charset</span>="UTF-8"&gt;
+                      <span class="const-color-blue">&lt;title&gt;</span>Let Create Your Website<span class="const-color-blue">&lt;/title&gt;</span>
+                  <span class="const-color-blue">&lt;/head&gt;</span>
+                  <span class="const-color-blue"> &lt;body&gt;</span>
+                      <span class="const-color-blue"> &lt;header&gt;</span>
+                          <span class="const-color-blue"> &lt;nav&gt;</span>
+                              <span class="const-color-blue"> &lt;ul&gt;</span>
+                                  <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Home</span> &lt;/li&gt;</span>
+                                  <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">About</span> &lt;/li&gt;</span>
+                                  <span class="const-color-blue"> &lt;li&gt;</span><span class="const-color-blue"><span class="charset-color-light">Contact</span>&lt;/li&gt;</span>
+                              <span class="const-color-blue"> &lt;/ul&gt;</span>
+                          <span class="const-color-blue"> &lt;/nav&gt;</span>
+                      <span class="const-color-blue"> &lt;/header&gt;</span>
+                  <span class="const-color-blue"> &lt;/body&gt;</span>
+                      <span class="const-color-blue">&lt;script&gt;</span>    
+                          <span class="const-color-blue">const</span> newTaskInput = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
+                          <span class="const-color-blue">const</span>  addTaskButton = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('addTask')</span>;
+                          <span class="const-color-blue">const</span>  taskList = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('taskList')</span>;
                             
-                            <span class="id-color-green">// add event listner //</span>
-                            addTaskButton.<span class="get-color-red">addEventListener</span>('click', () => 
-                                <span class="const-color-blue">const</span> taskText = newTaskInput.value.trim()
-                                <span class="const-color-blue">if</span> (taskText !== '') {
-                                    <span class="const-color-blue">const</span> li = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
-                                    li.innerHTML = `
+                          <span class="id-color-green">// add event listner //</span>
+                          addTaskButton.<span class="get-color-red">addEventListener</span>('click', () => 
+                              <span class="const-color-blue">const</span> taskText = newTaskInput.value.trim()
+                              <span class="const-color-blue">if</span> (taskText !== '') {
+                                  <span class="const-color-blue">const</span> li = <span class="document-color-yellow">document</span>.<span class="get-color-red">getElementById</span><span class="id-color-green">('newTask')</span>;
+                                  li.innerHTML = `
                                              
-                                        `;
-                                    taskList.<span class="get-color-red">appendChild</span>(li) 
+                                      `;
+                                  taskList.<span class="get-color-red">appendChild</span>(li) 
                                 });
-                        <span class="const-color-blue">&lt;/script&gt;</span>    
-                    <span class="const-color-blue"> &lt;/body&gt;</span>
-                </code>
+                      <span class="const-color-blue">&lt;/script&gt;</span>    
+                  <span class="const-color-blue"> &lt;/body&gt;</span>
+              </code>
             </pre>
             </div>
             <div class="hire-us">
-                <p>Our team is available for projects colaboration</p>
+                <p>Our team is available for projects collaboration</p>
                 <img src="/Assets/image/internet/web-monitor.jpg">
                 <button type="button" class="hire-btn">Hire Us</button>
             </div>
@@ -118,7 +118,7 @@
         <address>
             Connect With Us
             <a href="https://twitter.com/hologuti_BC" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/hologutiBC" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/hologutiBusines" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </address>
     </footer>
 </body>
