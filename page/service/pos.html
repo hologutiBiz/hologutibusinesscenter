@@ -12,125 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Serif:wght@100;200&family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <link rel="stylesheet" href="./Style-Folder/pos.css">
 
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cormorant Garamond', serif; 
-        }
-
-       /* header */
-       nav {
-        padding: 15px;
-        background-color: #f5f5f5;
-       }
-       .nav-list {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around; 
-       }
-       nav a {
-        text-decoration: none;
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 192, 203, 0);
-       }
-       nav a:hover {
-        color: blue;
-        background-color: snow;
-        border: 1px solid pink;
-       }
-
- 
-
-       /* main */
-       .financial-inclusion p {
-            margin: 5rem;
-            font-size: 38px;
-       }
-
-                /*(pos features) */
-       .agent-banking {
-            color: snow;
-            background-image: url('/Assets/image/POS/pos.png'); 
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-size: cover; 
-            padding: 0 5rem 20rem 5rem;  
-       }
-       .agent-banking h3 {
-            text-align: center;
-            font-size: 40px;
-       }
-       .agent-banking p {
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.489);
-            border-radius: 5px;
-            font-weight:100;
-            font-size: 36px;
-       }
-
-       .pos-features {
-            margin-left: 30%;
-            padding: 20px;
-            font-size: 34px;
-       }
-       .transactions-list {
-            color: blue;
-            font-size: 20px;
-       }
-
-
-                /* (getting pos) */
-        .getting-pos {
-            padding: 50px;
-            margin: 5rem 3.5rem 5rem 3.5rem;
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-        }
-        .getting-pos h3 {
-            text-align: center;
-            font-size: 40px;
-        }
-       .wrapper {
-            display: flex;
-            gap: 20px;
-       }
-       button {
-            width: 100%;
-            padding: 5px;
-            font-size: 20px;
-       }
-
-       .supported h2 {
-            text-align: center;
-       }
-       .supporter-image-wrapper {
-             display: flex;
-             place-content: center;
-       }
-       /* footer */
-       footer {
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            background-color: #000;
-       }
-       .fa-brands {
-            color: #fff;
-            padding: 10px;
-       }
+    <!-- <style>
      
      
-    </style>
+     
+    </style> -->
 </head>
 <body>
     <header>
         <nav>
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>   
             <ul class="nav-list">
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/page/service/webDesign.html">Web Development</a></li>
                 <li><a href="/page/service/banking.html">Banking Service</a></li>
                 <li><a href="/page/service/payment.html">Payment Services</a></li>
@@ -164,11 +61,11 @@
             <h3>Are you still waiting?</h3>
             <div  class="wrapper">
                 <div class="left">
-                    <p style="font-size: 34px;">Make <a href="" id="posPayment" style="text-decoration: double;">payment</a> now, you get your POS terminal in less than 24 and start making cool money</p>
+                    <p >Make <a href="" id="posPayment" style="text-decoration: double;">payment</a> now, you get your POS terminal in less than 24 and start making cool money</p>
                     <button type="button" id="getPOS">Get POS</button>
                 </div>
-                <div>
-                    <img src="/Assets/image/POS/pos-get2.jpg">
+                <div class="right">
+                    <img src="/Assets/image/POS/pos-get2.jpg" alt="a person giving POS">
                 </div>
             </div>
         </section>
