@@ -412,7 +412,8 @@ footer {
         .content-text {
             width: 24ch;
             padding: 10px 0;
-            font-size: 26px;
+            margin: 0 10px;
+            font-size: 24px;
         }
 
         .coding {
@@ -433,6 +434,10 @@ footer {
             /* padding: 10px 0;  */
             font-size: 22px;
         }
+        .hire-us img {
+            width: 330px;
+            /* height: 350px; */
+        }
         .hire-btn {
             width: 85%;
             right: 5px;
@@ -441,15 +446,19 @@ footer {
         }
 
         .web-sample {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: inherit;
             margin: 0;
         }
         .web-sample .content-text {
             text-align: justify;
             width: 25ch;
-            margin: 7px;
-            font-size: 26px;
-        }
+            margin: 10px;
+            font-size: 24px;
+        } 
         .video-wrapper {
             width: inherit;
             margin: 0;
@@ -468,7 +477,7 @@ footer {
             /* height: 350px; */
         }
         .video-wrapper div img {
-            width: 335px;
+            width: 300px;
         }
         
         
