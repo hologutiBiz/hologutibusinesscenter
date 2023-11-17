@@ -123,6 +123,9 @@ nav a:hover {
     padding: 20px;
     font-size: 34px;
 }
+::marker {
+    color: #ff0000;
+}
 .transactions-list {
     color: blue;
     font-size: 20px;
@@ -143,6 +146,9 @@ nav a:hover {
 .wrapper {
     display: flex;
     gap: 20px;
+}
+div.left p {
+    font-size: 30px;
 }
 button {
     width: 100%;
@@ -282,33 +288,38 @@ footer {
     
         .getting-pos {
             width: inherit;
-            margin: 40px 0px;
-            padding: 2rem 0;
+            margin: 0;
+            padding: 5rem 0;
         }
     
         .wrapper {
-            position: relative;
+            position: relative; 
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 400px;
-            padding: 4rem 0;
+            padding: 0; 
+            margin: 0;
+        }
+        .wrapper div.left {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            
+            
         }
         .wrapper div.left p {
-            text-align: justify;
-            margin: 20px;
-            font-size: 24px;  
+            width: 50ch;  
+            text-align: center;
+            margin: 0; 
+            /* font-size: 24px;   */
 
-        }
-        .wrapper div img {
-            width: inherit;
         }
         button {
             position: absolute;
             width: 80%;
             right: 0;
-            bottom: -15px;
+            bottom: 0px;
             left: 0;
             margin: auto;
         }
@@ -346,11 +357,16 @@ footer {
      
         .pos-features {
             display: block;
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
         .pos-features p {
             text-align: center;
+        }
+        .transactions-list {
+            margin-inline: 20%;
+            line-height: 2;
+            /* text-align: center; */
         }
     
         .getting-pos {
@@ -358,7 +374,6 @@ footer {
             margin: 40px 0px;
             padding: 2rem 0;
         }
-    
         .wrapper {
             position: relative;
             flex-direction: column;
@@ -372,9 +387,9 @@ footer {
             font-size: 24px;  
             margin: 0 10px;
         }
-        .wrapper div img {
+        /* .wrapper div img {
             width: 100%;
-        }
+        } */
         button {
             position: absolute;
             width: 500px;
@@ -386,13 +401,17 @@ footer {
     
         
         .supporter-image-wrapper img {
-            width: initial;
+            width: 100%;
         }
      }
 
 
+       /* max-width of 700px device */ 
+     @media screen and (max-width: 700px) {
+     }
+
     /* max-width of 499px device */ 
- @media screen and (max-width: 499px) {
+ @media screen and (max-width: 600px) {
     body {
         width: 100%;
     }
@@ -414,6 +433,9 @@ footer {
         text-align: justify;
         font-size: 22px;
     }
+    .transactions-list {
+        margin-inline: initial;
+    }
  
     .pos-features {
         display: block;
@@ -426,35 +448,40 @@ footer {
 
     .getting-pos {
         width: inherit;
-        margin: 40px 0px;
+        margin-block-end: 4rem;
         padding: 2rem 0;
     }
 
     .wrapper {
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
+        display: block;
         width: 100%;
-        height: 400px;
+        height: auto;
+        padding: 0;
+        margin-block-end: 2.5rem;
         z-index: -1;
     }
     .wrapper div.left p {
+        width: 32ch; 
+        text-align: justify;
         font-size: 24px;  
-        margin: 0 10px;
+        /* margin-inline: 10px;  */
     }
     .wrapper div img {
-        width: 100%;
+        width: 96vw;
+        margin-block-start: 20px;
     }
     button {
-        position: absolute;
+        position: absolute; 
         width: 390px;
         right: 0;
-        bottom: -15px;
+        bottom: -45px;
         left: 0;
         margin: auto;
     }
 
-    
+    .supported {
+        margin-block-start: 6.5rem;
+    }
     .supporter-image-wrapper img {
         width: 200px;
     }
@@ -465,6 +492,7 @@ footer {
  @media screen and (max-width: 399px) {
     body {
         width: 100%;
+        overflow-x: hidden;
     }
 
     .financial-inclusion p {
@@ -475,8 +503,8 @@ footer {
     }
 
     .agent-banking {
-        width: 350px;
-        padding: 0 0 40px 0;
+        width: 100%;
+        /* padding: 0 0 40px 0; */
     }
        .agent-banking p {
         width: 30ch;
@@ -493,6 +521,7 @@ footer {
     .pos-features p {
         text-align: center;
     }
+   
 
     .getting-pos {
         width: inherit;
@@ -502,36 +531,38 @@ footer {
 
     .wrapper {
         position: relative;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 400px;
+        display: block;
+        width: 100%; 
+        max-height: 370px;
+        margin-block-end: 3rem;
+        padding: 0;
         z-index: -1;
     }
     .wrapper div.left p {
-        font-size: 24px;  
-        margin: 0 10px;
+        font-size: 23px;  
+        width: 28ch;
     }
     .wrapper div img {
-        width: 100%;
+        margin-block-start: 20px;
     }
     button {
-        /* color: brown; */
-        position: absolute;
+        position: absolute; 
         width: 300px;
         right: 0;
-        bottom: 0;
+        bottom: -2.5em;
         left: 0;
-        margin: auto;
     }
 
-    
+    .supported {
+        margin-block-start: 7rem;
+    }
     .supporter-image-wrapper img {
         width: 170px;
     }
-    
 
-    
+    footer {
+        padding: 10px 0;
+    }  
  }
 
 
@@ -578,25 +609,23 @@ footer {
             font-size: 30px;
         }
         .wrapper {
-            position: relative;
-            flex-direction: column;
-            justify-content: center;
+            display: block;
+            margin: auto;
             width: 100%;
-            height: 400px;
+            height: 350px;
+            padding: 0;
             z-index: -1;
         }
         .wrapper div.left p {
             text-align: justify;
             width: 23ch;
             font-size: 24px;
-            margin: 0 10px;
         }
         .wrapper div img {
             width: 300px;
+            margin: 10px 0;
         }
         button {
-            /* color: brown; */
-            position: absolute;
             width: 300px;
             right: 0;
             bottom: 0;
