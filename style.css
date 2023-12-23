@@ -1,23 +1,37 @@
 
 body {
+    position: relative;
+    height: 70rem;
     margin: 0;
     padding: 0;
     background-color: snow;
+    background-image: url("https://i.postimg.cc/rwzxY5H2/decoration-4713177-1280.jpg"); /* to be removed */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+.word {
+    margin: auto;
+    color: white;
+    font: 700 normal 2.5em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  }
 
 /* header */
 header{
     position: static; 
     width: 100%;
-    display: flex;
+    display: none; /* to change back to flex */
     justify-content: space-between;  
     align-items: center;
     padding: 20px 0; 
     background-color: rgb(2, 2, 121); 
     transition: 0.5s;   
+    
 }
 header div {
-    display: flex;
+    display: none; /* to change back to flex */
     gap: 10px;
     margin: 10px;
 }
@@ -169,6 +183,7 @@ main {
 }
 
 section {
+    display: none;
     width: 300px;
     height: 400px;
     border-radius: 3px;  
@@ -226,6 +241,7 @@ article h3 {
     
      /* card-container */
 .card-container {
+    display: none; /* here too */
     width: 300px;
     height: 400px;
     border-radius: 3px;  
@@ -262,6 +278,8 @@ article h3 {
 
     /* Footer */
 footer {
+    position: absolute;
+    bottom: 0;
     color: #0000ff;
     text-align: center;
     height: 5rem;
@@ -324,9 +342,7 @@ address span {
             font-size: 24px;
             box-shadow: 0 1px 0 rgba(255, 255, 255, 0.01)
             inset;
-        }
-      
-        
+        }   
     } 
         /* 1024px device */
   @media screen and (max-width: 1025px) {
