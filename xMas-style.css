@@ -116,6 +116,7 @@
   @media screen and (max-width: 359px) {
     body {
       width: 100%;
+      height: 100vh;
     }
 
     .words span {
@@ -128,6 +129,7 @@
 @media screen and (min-width: 360px) and (max-width: 800px) {
   body {
     width: 100%;
+    height: 100vh;
   }
 
   .words {
