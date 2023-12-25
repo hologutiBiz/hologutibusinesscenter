@@ -6,7 +6,7 @@
 .words {
     color: #f4d03f;
     font-size: 0;
-    line-height: 1.5;
+    line-height: 1;
   }
   
   .words span {
@@ -14,6 +14,36 @@
     display: inline-block;
     animation: move 3s ease-in-out infinite;
   }
+
+  p.message {
+    color: #fffafa;
+    text-decoration: solid;
+    text-transform: capitalize;
+    text-justify: auto;
+    padding: 20px;
+    background-color: #00000070;
+    border: 1px solid #ffffff34;
+    border-radius: 10px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+
+    animation: here 5s ease infinite alternate-reverse;
+  }
+    @keyframes here {
+      0% {
+        opacity: 0;
+      }
+      25%{
+        opacity: 0.2;
+      }
+      75% {
+        color: #add8eb
+      }
+      100% {
+        color: #fff;
+      }
+    }
   
   @keyframes move {
     0% {
@@ -52,14 +82,15 @@
   }
   
 
-/* 
-  svg text {
+
+  /* svg text {
     font-family: Lora;
     letter-spacing: 10px;
     stroke: #ffa5d8;
-    font-size: 150px;
+    font-size: 40px;
     font-weight: 700;
     stroke-width: 3;
+    z-index: 3;
    
     animation: textAnimate 5s infinite alternate;
     
@@ -79,5 +110,36 @@
       fill: hsla(189, 68%, 75%,0%)
     }
     
-  } */
-  
+  }  */
+
+
+  @media screen and (max-width: 359px) {
+    body {
+      width: 100%;
+    }
+
+    .words span {
+      color: #f4d03f;
+      font-size: 2.5rem;
+      /* line-height: 1.5; */
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+
+  .words {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .words span {
+    color: #f4d03f;
+    font-size: 3.4rem;
+    /* line-height: 1.5; */
+  }
+}
