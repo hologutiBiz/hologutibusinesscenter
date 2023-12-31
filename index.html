@@ -128,99 +128,113 @@
         </section>
 
             <div class="presentation">
-                <!-- Xmass style-->
-                <div class="words word-1">
-                    <span>M</span>
-                    <span>E</span>
-                    <span>R</span>
-                    <span>R</span>
-                    <span>Y</span>
-                    <!-- <span>E</span>
-                    <span>N</span> -->
-                  </div>
-                  
-                  <div class="words word-2">
-                    <span>C</span>
-                    <span>H</span>
-                    <span>R</span>
-                    <span>I</span>
-                    <span>S</span>
-                    <span>T</span>
-                    <span>M</span>
-                    <span>A</span>
-                    <span>S</span>
-                  </div>
-<!--                   
-                  <div class="words word-3">
-                    <span>C</span>
-                    <span>O</span>
-                    <span>O</span>
-                    <span>L</span>
-                  </div> -->
-
-                <p class="message">May peace, love and prosperity follow you always</p>
-               
-                  
-            </div>
-          
-    </main>
-    <!-- <footer>
-        &copy;2023 Hologuti Business Centre - All Rights Reserved
-        <address><span>Social</span>Media:- 
-            <a href="https://twitter.com/hologutiBcentre" target="_blank"><i class="fa-brands fa-square-x-twitter" aria-label="visit our X (former twitter) page"></i></a>
-            <a href="https://www.facebook.com/hologutiBusines" target="_blank"><i class="fa-brands fa-facebook" aria-label="visit our fa-facebook page"></i></a>
-            <a href="https://m.me/109930914660224" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
-            <a href="https://www.instagram.com/hologutibusines/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        </address>
-    </footer> -->
-    <!-- <script src="./scripts/main.js"></script>  -->
+                <canvas id="fireworks"></canvas>
+                <h1 class="newYear year">Happy New Year</h1> 
+                <h2 class="newYear date">Welcome to 2024</h2>
+                <p class="newYear para">In this new year, GOOD SUCCESS</p>
     <script>
-        let words = ['Hi i like HTML', 'I also like css', 'Lorem ipsum dolor sit amet', ' consectetur adipiscing elit', 'sed do eiusmod tempor incididunt'],
-    part,
-    i = 0,
-    offset = 0,
-    len = words.length,
-    forwards = true,
-    skip_count = 0,
-    skip_delay = 15,
-    speed = 70;
-let wordflick = function () {
-  setInterval(function () {
-    if (forwards) {
-      if (offset >= words[i].length) {
-        ++skip_count;
-        if (skip_count == skip_delay) {
-          forwards = false;
-          skip_count = 0;
-        }
-      }
-    }
-    else {
-      if (offset == 0) {
-        forwards = true;
-        i++;
-        offset = 0;
-        if (i >= len) {
-          i = 0;
-        }
-      }
-    }
-    part = words[i].substr(0, offset);
-    if (skip_count == 0) {
-      if (forwards) {
-        offset++;
-      }
-      else {
-        offset--;
-      }
-    }
-    $('.word').text(part);
-  },speed);
-};
+        // Our JavaScript will go here
+        const canvas = document.getElementById('fireworks');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-$(document).ready(function () {
-  wordflick();
-});
+class Particle {
+    constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.velocity = {
+            x: (Math.random() - 0.5) * 8,
+            y: (Math.random() - 0.5) * 8
+        };
+        this.alpha = 1;
+        this.friction = 0.99;
+    }
+
+    draw() {
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+
+    update() {
+        this.velocity.x *= this.friction;
+        this.velocity.y *= this.friction;
+        this.x += this.velocity.x;
+        this.y += this.velocity.y;
+        this.alpha -= 0.01;
+    }
+}
+
+class Firework {
+    constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.velocity = {x: 0, y: Math.random() * -2.5 - 0.5};
+        this.particles = [];
+        this.lifespan = 180;
+        this.hasExploded = false;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 3, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+
+    explode() {
+        for (let i = 0; i < 50; i++) {
+            this.particles.push(new Particle(this.x, this.y, this.color));
+        }
+    }
+
+    update() {
+        this.lifespan--;
+
+        if (this.lifespan <= 0 && !this.hasExploded) {
+            this.explode();
+            this.velocity = {x: 0, y: 0};
+            this.hasExploded = true;
+        } else if (this.lifespan > 0) {
+            this.y += this.velocity.y;
+        }
+
+        for (let i = 0; i < this.particles.length; i++) {
+            this.particles[i].update();
+            this.particles[i].draw();
+        }
+    }
+}
+
+let fireworks = [];
+
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        fireworks.forEach((firework, index) => {
+            firework.update();
+            firework.draw();
+
+            if (firework.lifespan <= 0 && firework.particles.every(p => p.alpha <= 0)) {
+                fireworks.splice(index, 1);
+            }
+        });
+
+        if (Math.random() < 0.015) { 
+        const x = Math.random() * canvas.width;
+        const color = `hsl(${Math.random() * 360}, 50%, 50%)`;
+        fireworks.push(new Firework(x, canvas.height, color));
+    }
+ }
+
+animate();
     </script>
 </body>
 </html>
