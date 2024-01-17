@@ -1,0 +1,636 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5ff;
+    font-family: 'Cormorant Garamond', serif; 
+}
+header {
+    background-image: url('/Assets/image/bill.png');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    padding: 100px;
+  
+}  
+ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    top: 100px; 
+} 
+li {
+    padding: 10px;
+    background-color: #0000009a;
+    border-radius: 10px;  
+   
+}
+li a {
+    filter: grayscale(100%);
+    transition-duration: 350ms;
+    transition-timing-function: ease; 
+    font-size: large;
+}
+a:hover {
+    color: chocolate;
+    filter: grayscale(0);
+
+}
+
+
+/* <h> and <p> tag */
+h2 {
+    color: chocolate;
+    text-align: center;
+    font-size: 36px;
+}
+h3 {
+    color: #add8e6;
+    font-size: 34px;
+}
+p { 
+    color: #add8e6;
+    text-align: center;
+    font-size: 32px;
+} 
+
+    /* main */
+
+section.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+}
+.intro p {
+    color: chocolate;
+    font-size: 4.5rem;
+}
+span.HBC {
+   color:  #add8e6;
+}
+
+
+/* (article) */
+div.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+    border: none;
+}
+.item {
+    width: 300px;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.item:hover {
+    box-shadow: -2px 2px 3px 2px grey;
+}
+.item a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/*(education section)*/
+section.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5rem 0;
+    background-image: url('/Assets/image/education/education.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+.education .slide-container p {
+    color: #add8e6;
+   font-size: initial;
+}
+div.at-the-finger-tip {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.717);
+    border-radius: 5px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    padding: 10px;
+   
+}
+
+div.slide-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.717);
+    border-radius: 5px;
+}
+div.slider {
+    display: none;
+    border: 1px solid #add8e63e;
+  
+}
+img.photo {
+    width: 250px;
+    height: 400px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+button.purchase-btn {
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+}
+button.purchase-btn:hover {
+    color: #800080;
+    background-color: #add8e6;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/*(tv section)*/
+section.tv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin: 8rem;
+    gap: 20px;
+    
+}
+
+.tv h2, p {
+    color: unset;
+    font-weight: bolder;
+}
+
+button.subscribe {
+    color: #fff;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none; 
+    background-color: #000;
+} 
+button.subscribe:hover {
+    cursor: pointer;
+    animation: pulse 5s infinite;
+}
+@keyframes pulse {
+    0% {
+        background-color: #001F3F;
+}
+    30% {
+        background-color: green;
+    }
+    65% {
+        background-color: mediumblue;
+    }
+    100% {
+        background-color: chocolate;
+}
+}
+
+
+/* electricity section */
+section.electric {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color: #000; 
+    height: 30rem;
+    padding: 20px;
+}
+.electric p {
+    color: #add8e6;
+}
+
+.fa-lightbulb {
+    position: absolute;
+    color:rgba(255, 255, 0, 0.8);
+    transform: rotate(240deg); 
+    font-size: 70px;
+    box-shadow: 0px -600px 100px 30px rgba(255, 255, 0, 0.8); 
+    transition: opacity 0.5s ease; 
+    top: 5%;
+    right: 10%;   
+}
+.fa-lightbulb.off {
+    opacity: 0; 
+
+}
+section.electric {
+    font-size: 36px;
+}
+
+
+section .recharge-btn {
+    position: relative;
+    width: 200px;
+    left: 35%;
+    padding: 10px;
+    background-color: #0d023477;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.recharge-btn:hover {
+    color: #000;
+    background-color: rgba(255, 255, 3, 0.482);
+    cursor: pointer;
+}
+
+img.e-logo {
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+    /*internet section */
+section.internet {
+    position: relative;
+    padding: 1px;
+    border-top: 1px solid #f5f5ff67;
+   
+}
+div.back-image {
+    background-image: url('/Assets/image/internet/internet.jpeg');
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover;  
+    height: 500px;
+}
+div.i-wrapper {
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: #0000009e;
+    left: 25%; 
+    top: 35px;
+    backdrop-filter: blur(5px); 
+}
+section.internet h2 {
+    color: #fff;
+    font-size: 46px;
+}
+section.internet p {
+    color: #fff;
+}
+section.internet img {
+    all: unset;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid #f5f5ff27;
+    border-radius: 10px;
+    padding: 5px;  
+    margin-left: 100px;          
+}
+div.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.pay-now {
+    color: #ffffff62; 
+    width: 70%;
+    padding: 10px;
+    background-color: initial; 
+    font-size: 20px;
+}
+button.pay-now:hover {
+    cursor: pointer;
+    color: #0000ff;
+    background-color: #f5f5ff91; 
+    border-radius: 15px;
+    border: none;
+}
+
+    /* SMS section */
+section.sms {
+    height: 30rem;
+    padding: 15px;
+    margin: 5rem;
+    border-bottom: 1px solid #ff69b4;
+    
+}
+
+section.sms div.icon-wrapper {
+    color: #ff69b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    font-size: 200px;
+    gap: 50px;
+   
+}
+button.cliqPayment-btn {
+    color: #ff69b4;
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+    font-size: 24px;
+    
+}
+
+
+/* lr Card section */
+section.lrcard {
+    position: relative;
+    background: conic-gradient( green, red, yellow);
+    height: 700px;
+    margin-top: auto;
+    margin-left: auto;
+    filter: brightness(60%);
+
+}
+.lrcard h2 {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 9rem;
+   
+}
+#faBeatEnvelop {
+    position: absolute;
+    bottom: 200px;
+    left: 46%; 
+    color: #fff;
+    background-color: #000;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 100px;
+}
+button.buy {
+   width: 300px;
+   padding: 10px;
+   margin: 4em 0 0 40%;
+   background-color: #0000000b; 
+   border: 1px solid #000;
+   border-radius: 10px;
+   font-size: 20px;
+}
+.buy:hover {
+    color: #fff;         
+    background-color: green;
+    border: 1px solid yellow;
+}
+
+
+/* transaction slip */
+.transaction-slip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin: 5rem 0;
+}
+.slip-left,
+.presentation-right {
+    width: 40%;
+    height: auto;
+}
+.slip-btn {
+    color: #fff;
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    margin: 10px 0 2em 4em;
+    font-size: 20px;
+}
+.slip-btn:hover {
+    color: chocolate;
+    background-color: #000000cf;
+    font-weight: bold;
+}
+
+/* Many more */
+.many-more h2 {
+    font-size: 15rem;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    background-color: #fff;
+    border-top: 1px solid #add8e636;
+}
+
+
+
+
+            /* Breakpoints */
+
+        /* 300 to 360 devices */
+    @media screen and (max-width: 360px) {
+        body {
+            width: 100%;
+        }
+
+        header li {
+            margin: auto 1rem;
+        }
+
+        section.intro p {
+            margin: 0 10px;
+            font-size: 2rem;
+        }
+        span.HBC {
+            color:  #0b0268;
+         }
+
+        .item {
+            margin: 10px auto;
+            box-sizing: border-box;
+
+         }
+         .item:hover {
+            box-shadow: -2px 2px 3px 2px grey;
+            transition: 0.5s;
+        }
+        .item:hover a  {
+            color: #000;
+            /* transform: scale(5) !important; */
+            transition: 0.6s;
+            font-size: 27px;
+        }
+
+
+        section.education {
+            position: relative; 
+            margin: 0;
+        }
+        .at-the-finger-tip {
+            position: relative;
+        }
+        .at-the-finger-tip h3 {
+            position: static;
+            width: 20ch;
+        }
+        .slide-container {
+            position: absolute;
+
+        }
+
+
+        /* section.tv {
+            margin: 0;
+        } */
+
+
+        section.internet {
+            /* display: flex;
+            justify-content: center; */
+
+            margin: 5rem 0;
+        }
+        .i-wrapper.i-wrapper {
+            width: 90%;
+            left: 5%;
+        }
+
+        section.sms {
+            margin: 2.5rem 0 4rem;
+            /* width: 100%; */
+            background-color: #0b0268;
+        }
+        button.cliqPayment-btn {
+            width: 300px;
+        }
+        button.cliqPayment-btn:hover {
+            background-color: transparent;
+            font-size: 24px;
+            transition: 0.5s;
+        }
+
+        /* lr Card section */
+        section.lrcard {
+            display: flex;
+            justify-content: center;
+        }
+        section.lrcard h2 {
+            width: 6ch;
+            margin: auto;
+            font-size: 4.5em;
+        }
+        #faBeatEnvelop {
+            position: absolute;
+            /* margin: auto; */
+            left: 30%; 
+        }
+        button.buy {
+            color: #fff;
+            position: absolute;
+            width: 90%;
+            padding: 15px;
+            margin: 0;
+            bottom: 10%;
+            left: 15px;
+            background-color: #000;
+            border: 2px solid #fff;
+        }
+        button.buy:hover {
+            color: #000;
+            background-color: #fffafa;
+            border: 2px solid #000;
+            font-weight: bold;
+            transition: 0.5s;
+
+        }
+
+
+        section.transaction-slip {
+            display: block; 
+        }
+        .slip-left,
+        .presentation-right,
+        .slip-btn {
+            width: 90%;
+            margin: auto;
+        }
+
+        .many-more h2 {
+            font-size: 7rem;
+        }
+
+
+        footer {
+            /* color: #fff; */
+            position: relative;
+            padding: 5rem 0;
+            background-color: #000;
+        }
+        footer span.connect-with-us {
+            position: absolute;
+            color: #fff;
+            width: 100%;
+            top: 20%;
+            left: 4%;
+            text-align: center;
+            font-size: 2em;
+        }
+        footer .fa-brands {
+            color: #fff;
+            top: 40%;
+            margin: 0.7em 15px;
+            font-size: 3em;
+        }
+        .fa-brands:hover {
+            color: gold;
+            transition: 0.5s;
+        }
+
+    }
