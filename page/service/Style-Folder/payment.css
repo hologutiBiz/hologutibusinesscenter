@@ -446,17 +446,22 @@ button.buy {
 
 /* transaction slip */
 .transaction-slip {
-    display: flex;
+    display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #000;
     margin: 5rem 0;
 }
+.divider {
+    display: flex;
+    justify-content: center;
+}
 .slip-left,
 .presentation-right {
     width: 40%;
     height: auto;
-}
+} 
 .slip-btn {
     color: #fff;
     width: 300px;
