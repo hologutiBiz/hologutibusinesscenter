@@ -93,7 +93,7 @@ section.intro {
     font-size: 4.5rem;
 }
 span.HBC {
-   color:  #add8e6;
+    color:  #0b0268;
 }
 
 
@@ -440,6 +440,7 @@ button.buy {
     color: #fff;         
     background-color: green;
     border: 1px solid yellow;
+    transition: 0.4s;
 }
 
 
@@ -497,8 +498,127 @@ footer span {
 
             /* Breakpoints */
 
-        /* 300 to 360 devices */
-    @media screen and (max-width: 360px) {
+          /* 412 to 700 devices */
+    @media screen and (max-width: 700px) {
+        body {
+            width: 100%;
+        }
+
+        header li {
+            margin: auto 1rem;
+        }
+        header li a {
+            font-size: 3em;
+        }
+
+
+        section.intro p {/* section.education */ 
+            margin: 0 10px;
+            font-size: 2rem;
+        }/* end */
+
+
+        div.slide-container {
+            position: relative;
+            top: -5%; 
+        } 
+        button.purchase-btn { 
+            position: absolute;
+            width: 260px;
+            bottom: 2em; 
+            right: 4%;
+        }/* section.education end */
+
+
+        section.electric {
+            padding: 10rem 0;
+        }/* section.electricity end */
+
+
+        .i-wrapper.i-wrapper {/* section.internet */
+            left: 60px;
+            width: 500px;
+            padding: 10px;
+        }
+        section.internet .swift-logo {
+            position: absolute;
+            top: 200px;
+            left: -25px; 
+        }
+        section.internet .spectranet-logo {
+            position: absolute;
+            top: 200px;
+            right: 80px; 
+        }
+        button.pay-now {
+            position: absolute;
+            color: #ffffff62; 
+            width: 70%;
+            bottom: 20px;
+            padding: 10px;
+            background-color: initial; 
+            font-size: 20px;
+        }/* section.internet end */
+
+
+        section.lrcard {/* section.lrcard */
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .lrcard h2 {
+            width: 16ch;
+            font-size: 5rem;
+        }
+        #faBeatEnvelop {
+            position: absolute;
+            bottom: 25%;
+            left: 40%;  
+            color: #fff;
+            background-color: #000;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 100px;
+        }
+        button.buy {
+            position: absolute;
+            width: 300px;
+            right: 25%;  
+            bottom: 40px;
+            padding: 10px;
+            background-color: #0000000b; 
+            border: 1px solid #000;
+            border-radius: 10px;
+            font-size: 20px;
+         }/* section.lrcard end */
+
+
+        .transaction-slip { /* transaction slip */
+            flex-direction: column;     
+        }
+        .divider {
+            display: flex;
+            justify-content: center;
+        }
+        .slip-left {
+            position: relative;
+        }
+        .slip-btn {
+            position: absolute;
+            width: 250px;
+            padding: auto;
+            margin: auto;
+        }/* transaction slip end*/
+
+
+         .many-more h2 {
+            font-size: 8rem;
+        }
+    }
+
+
+        /* 300 to 430 devices */
+    @media screen and (max-width: 431px) {
         body {
             width: 100%;
             padding: 0;
@@ -516,10 +636,7 @@ footer span {
             margin: 0 10px;
             font-size: 2rem;
         }
-        span.HBC {
-            color:  #0b0268;
-         }
-
+        
         .item {
             margin: 10px auto;
             box-sizing: border-box;
@@ -561,8 +678,9 @@ footer span {
         } 
         button.purchase-btn {
             position: absolute;
-            bottom: 3em;
-            
+            width: 90%;
+            left: -2%; 
+            bottom: 3em;   
         }
       
        
@@ -573,6 +691,10 @@ footer span {
         .tv-text-wrapper {
             width: 100%;
         }
+        .tv-text-wrapper p {
+            width: 24ch;
+            font-size: 2rem;
+        }
         .tv-image-wrapper {
             display: flex;
             flex-direction: column;
@@ -580,34 +702,48 @@ footer span {
 
 
         section.electric {
-            height: 55rem;
+            height: 800px;
+        }
+        .e-wrapper p {
+            width: 22ch;
+        }
+        .recharge-btn {
+            margin-top: 30px;
         }
 
-        .fa-lightbulb {
+        /* .fa-lightbulb {
             top: 80%;
             transform: rotate(215deg); 
             box-shadow: 10px -150px 80px 40px rgba(255, 255, 0, 0.8); 
             font-size: 50px;
         }
+        created special styles for it down the page */
   
        
         section.internet {
+            position: relative;
             height: 45rem;
         }
         div.back-image {
             height: 42em;
-
         }
         .i-wrapper.i-wrapper {
-            width: 100%;
+            width: inherit;
             height: 37em;
             left: unset;
         }
+        .i-wrapper .swift-logo {
+            position: absolute;
+            margin: 2em 0 0 90px; 
+        }
+        .i-wrapper .spectranet-logo {
+            margin: 10em  0 0 0; 
+        } 
         section.internet h2 {
             font-size: 38px;
         }
         div.button-wrapper {
-            margin-top: 20px;
+            margin-top: 10px;
         }
    
 
@@ -631,7 +767,6 @@ footer span {
         }
         #faBeatEnvelop {
             position: absolute;
-            /* margin: auto; */
             left: 30%; 
         }
         button.buy {
@@ -655,15 +790,27 @@ footer span {
         }
 
 
-        section.transaction-slip {
-            display: block; 
+        .divider {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5em;
         }
         .slip-left,
-        .presentation-right,
-        .slip-btn {
-            width: 90%;
-            margin: auto;
+        .presentation-right {
+            position: relative;
+            width: inherit;
         }
+        .transaction-slip p {
+            font-size: 26px;
+            margin: 10px;
+        }
+        button.slip-btn {
+            position: absolute;
+            right: 12%;
+            margin: 10px 0;
+        }
+       
 
         .many-more h2 {
             font-size: 7rem;
@@ -698,5 +845,40 @@ footer span {
             color: gold;
             transition: 0.5s;
         }
+    }
 
+                /* for bulb light  only*/
+    @media screen and (min-width: 319px) and (max-width: 369px) {
+        .fa-lightbulb {
+            top: 90%;
+            left: 150px;
+            transform: rotate(0deg); 
+            box-shadow: -50px -110px 80px 20px rgba(255, 255, 0, 0.8); 
+            font-size: 50px;
+        }
+    }
+    /* @media screen and (min-width: 370px) and (max-width: 396px) {
+        .fa-lightbulb {
+            top: 80%;
+            transform: rotate(215deg); 
+            box-shadow: 50px -100px 80px 40px rgba(255, 255, 0, 0.8); 
+            font-size: 50px;
+        }
+    } */
+    @media screen and (min-width: 370px) and (max-width: 431px) {
+        .fa-lightbulb {
+            right: 45%;
+            top: 90%;
+            transform: rotate(0deg); 
+            box-shadow: 0px -80px 80px 40px rgba(255, 255, 0, 0.8); 
+            font-size: 50px;
+        } 
+    }
+    @media screen and (min-width: 432px) and (max-width: 700px) {
+        .fa-lightbulb {
+            top: 83%; 
+            transform: rotate(270deg); 
+            box-shadow: 0px -220px 80px 40px rgba(255, 255, 0, 0.8); 
+            font-size: 50px;
+        }
     }
