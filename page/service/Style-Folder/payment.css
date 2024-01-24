@@ -503,6 +503,24 @@ footer span {
 
             /* Breakpoints */
 
+         /* 412 to 700 devices */
+    @media screen and (max-width: 900px) {
+        body {
+            width: 100%;
+        }
+
+
+        /* section.internet {
+           
+        }  */
+        div.i-wrapper {
+            width: 600px;
+            left: 10%;
+            margin: 0;
+        }
+    }
+
+
           /* 412 to 700 devices */
     @media screen and (max-width: 700px) {
         body {
