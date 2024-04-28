@@ -1,0 +1,100 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    background-color: #03036d;
+}
+
+header {
+    display: flex;
+    padding: 10px 0;
+    background-color:#fff;
+}
+
+.brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    gap: 10px;
+}
+
+.brand-container .logo {
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    outline: 1px solid #03036d19;
+
+}
+
+ul {
+    color: #03036d;
+    list-style: none;
+    display: flex;
+}
+
+main {
+    color: #fff;
+    margin: 3rem;
+}
+
+main .welcome-text {
+    text-align: center;
+} 
+.welcome-text h2 {
+    margin-top: 20px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service {
+    flex-basis: 33.33%;
+    /* width: 250px; */
+    height: auto;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    outline: 1px solid #add8ea;
+
+}
+.wrapper {
+    color: #000;
+    display: block;
+    margin: 0 auto;
+    width: inherit;
+    height: inherit;
+    text-decoration: none;
+    text-align: justify;
+    /* background-color: #03036d0d; */
+    border-radius: inherit;
+} 
+.wrapper > * {
+    margin: 1rem;
+    font-size: 1.1em;
+} 
+.wrapper h4 {
+    color: #ff0000;
+}
+.wrapper:hover {
+    transform: scaleX(4px);
+    transform: 0.4s;
+}
+.fa-solid {
+    color: #add8ea;
+    padding: 5px;
+    font-size: 30px;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+
