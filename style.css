@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
 
 * {
     margin: 0;
@@ -7,11 +8,11 @@
 }
 body {
     background-color: #03036d;
+    font-family: "Arapey", serif;
+
 }
 
-header {
-   
-    /* padding: 10px 0; */
+header {   
     background-color:#fff;
 }
 
@@ -30,17 +31,18 @@ nav {
     margin: 1em 7em 1em 0;
     gap: 10px;
 }
-
 .brand-container .logo {
-    width: 60px;
+    width: 80px;
     background-color: #fff;
     padding: 3px;
     border-radius: 50%;
     outline: 1px solid #03036d19;
-
 }
-
-
+.brand-container h1 {
+    color:#0000ff;
+    font-size: 30px;
+    font-weight: 400;
+}
 
 ul {
     color: #03036d;
@@ -88,6 +90,8 @@ main .welcome-text {
 
 }
 .service:hover {
+    color: #add8ea;
+    background-color: #ffffffea;
     transform:scaleY(1.1);
     box-shadow: -2px 2px 5px #000;
     outline: none;
@@ -228,6 +232,45 @@ main .welcome-text {
     background-color: #fff;
 
  }
+
+
+
+                /* media view */
+        
+        @media screen  and (max-width: 600px) {
+                body {
+                    width: 100%;
+                }
+
+
+                .brand-container {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin: 0;
+                }
+
+                ul {
+                    color: #03036d;
+                    display: none;
+                    list-style: none;
+                }
+
+
+                main {
+                    margin: 1.5rem;
+                }
+                .welcome-text h1 {
+                    text-align: justify;
+                    width: 20ch;
+                    font-size: 30px;
+                }
+
+
+                .service {
+                    flex-basis: 90%;
+  
+                }
+        }
 
 
 
