@@ -44,14 +44,49 @@ nav {
     font-weight: 400;
 }
 
-ul {
-    color: #03036d;
+
+nav ul {
+    /* color: #03036d; */
     display: flex;
     list-style: none;
 }
-li {
-    margin-left: 2em;
+nav li {
+
+    margin: 1em; 
+    /* border: 1px solid #0000ff00;  */
+    font-size: 20px;
 }
+nav ul li a {
+    color: #03036d;
+    text-decoration: none;
+    padding: 5px 15px ; 
+    border: 1px solid #0066ff00;
+    border-radius: 5px;
+}
+nav ul li a:hover {
+    color: #0066ff;
+    padding: 7px 15px 10px 15px;
+    border: 1px solid #0066ff;
+    font-weight: bold;
+    transition: 0.4s;
+}
+/* nav ul li a{
+    color:  #fff;   
+    display: block; 
+    text-decoration: none;
+    padding: 10px 15px;
+    line-height: 1; 
+    border: 1px solid #0000ff00; 
+    border-radius: 5px;
+    transition: 0.4s;
+    font-size: 20px;
+}  */
+/* nav ul li a:hover{
+    color: #0000ff;
+    padding: 10px 20px 15px 20px;
+    border: 1px solid #0000ff; 
+    background-color:  #fff;
+} */
 
 main {
     color: #fff;
@@ -236,7 +271,7 @@ main .welcome-text {
 
 
                 /* media view */
-        
+            /* 600px */
         @media screen  and (max-width: 600px) {
                 body {
                     width: 100%;
@@ -261,7 +296,7 @@ main .welcome-text {
                 }
                 .welcome-text h1 {
                     text-align: justify;
-                    width: 20ch;
+                    width: 98%;
                     font-size: 30px;
                 }
 

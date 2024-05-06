@@ -121,7 +121,7 @@ main {
 /* (the background image) */
 .background-image {
     position: absolute ;
-    background-image: url('../Assets/image/hbc-logo.jpg');
+    background-image: url('https://i.postimg.cc/wjq0TBDq/of-HBC-Logo.webp');
     background-repeat: no-repeat; 
     background-size: cover;
     width: 100%;
