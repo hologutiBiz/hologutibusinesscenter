@@ -78,12 +78,12 @@ nav {
     width: 35px;
     height: 100%;
     cursor: pointer;
-    /* z-index: 3; */
-    /* opacity: 0;  */
+    z-index: 3; 
+    opacity: 0;  
 }
 .hamburger,
 .toggle-menu {
-    /* display: none;    */
+    display: none;    
 }
 nav input:checked ~ .hamburger {
     background-color: transparent;
@@ -103,16 +103,12 @@ nav input:checked ~ ul {
     box-shadow: -20px 0 40px rgba(0, 0, 0, 0.454);
 }
 
-
 nav ul {
-    /* color: #03036d; */
     display: flex;
     list-style: none;
 }
 nav li {
-
     margin: 1em; 
-    /* border: 1px solid #0000ff00;  */
     font-size: 20px;
 }
 nav ul li a {
@@ -129,23 +125,7 @@ nav ul li a:hover {
     font-weight: bold;
     transition: 0.4s;
 }
-/* nav ul li a{
-    color:  #fff;   
-    display: block; 
-    text-decoration: none;
-    padding: 10px 15px;
-    line-height: 1; 
-    border: 1px solid #0000ff00; 
-    border-radius: 5px;
-    transition: 0.4s;
-    font-size: 20px;
-}  */
-/* nav ul li a:hover{
-    color: #0000ff;
-    padding: 10px 20px 15px 20px;
-    border: 1px solid #0000ff; 
-    background-color:  #fff;
-} */
+
 
 main {
     color: #fff;
@@ -306,9 +286,7 @@ main .welcome-text {
  .vlb-link .fa-arrow-right {
     display: none; 
  }
- /* .fa-arrow-right {
-    display: none;
- } */
+
  .vlb-link:hover > .vlb-link-span{
     display: none;
  }
@@ -365,6 +343,35 @@ main .welcome-text {
   
                 }
         }
+
+            @media screen and (max-width: 929px) {
+                
+                nav {
+                    position: relative;
+                }
+                .hamburger,
+                .toggle-menu {
+                    display: block;
+                }
+                .toggle-menu {
+                    position: fixed;
+                    right: 3%;
+                }
+        ul {
+            justify-content: start;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: -50px;
+            right: -200%;
+            width: 98%;
+            height: 100vh;
+            background-color: #fff;
+            padding-top: 20%;
+            z-index: 1;
+            transition: 0.5s;
+        }
+    }
 
 
 
