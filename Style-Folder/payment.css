@@ -203,7 +203,6 @@ button.purchase-btn:hover {
 
 /*(tv section)*/
 section.tv {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
